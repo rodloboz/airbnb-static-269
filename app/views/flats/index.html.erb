@@ -1,0 +1,24 @@
+
+<div class="container">
+  <h1>Flats</h1>
+
+  <div class="row">
+    <% @flats.each do |flat| %>
+        <div class="col-sm-4">
+          <div class="card-trip">
+            <img src="<%= flat["imageUrl"] %>">
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= flat["name"] %></h2>
+              </div>
+              <h2 class="card-trip-pricing">
+                <span><%= flat["priceCurrency"] %></span>
+                <span><%= flat["price"] %></span>
+              </h2>
+              <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
+            </div>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>
